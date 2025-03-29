@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe & Nutrition Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-utensils"></i> Recipe & Nutrition Hub</h1>
+            <p>Find your perfect meal with ease and nutrition in mind</p>
+        </header>
+
+        <main>
+            <section class="search-section">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search recipes (e.g., pasta, salad, chicken)...">
+                    <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
+                </div>
+                <div class="filters">
+                    <select id="dietFilter">
+                        <option value="">All Diets</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="glutenFree">Gluten Free</option>
+                        <option value="ketogenic">Ketogenic</option>
+                        <option value="pescatarian">Pescatarian</option>
+                        <option value="paleo">Paleo</option>
+                        <option value="whole30">Whole30</option>
+                        <option value="lowFodmap">Low FODMAP</option>
+                    </select>
+                    <select id="intoleranceFilter">
+                        <option value="">No Intolerances</option>
+                        <option value="dairy">Dairy</option>
+                        <option value="egg">Egg</option>
+                        <option value="gluten">Gluten</option>
+                        <option value="grain">Grain</option>
+                        <option value="peanut">Peanut</option>
+                        <option value="seafood">Seafood</option>
+                        <option value="sesame">Sesame</option>
+                        <option value="shellfish">Shellfish</option>
+                        <option value="soy">Soy</option>
+                        <option value="sulfite">Sulfite</option>
+                        <option value="treeNut">Tree Nut</option>
+                        <option value="wheat">Wheat</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="ingredients-section">
+                <h2><i class="fas fa-carrot"></i> Find by Ingredients</h2>
+                <div class="ingredients-container">
+                    <input type="text" id="ingredientsInput" placeholder="Enter ingredients (e.g., tomato, chicken, rice)">
+                    <button id="ingredientsBtn"><i class="fas fa-mortar-pestle"></i> Find Recipes</button>
+                </div>
+            </section>
+
+            <section class="results-section">
+                <div id="loading" class="hidden"><i class="fas fa-spinner fa-spin"></i> Loading...</div>
+                <div id="error" class="hidden"></div>
+                <div id="recipesGrid" class="recipes-grid"></div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
